@@ -3,19 +3,20 @@ import DeleteButton from "./DeleteButton";
 import Form from "./Form";
 import "../Css/Books.css";
 const Books = () => {
-  const [books, setBooks] = useState([
+  const [books] = useState([
     {
       bookName: "The Hunger Games",
       author: "Jim Oluwaseyi",
     },
   ]);
+  
   return (
     <>
       <section className="bookBg">
         <div className="bookContainer">
           <p>Action</p>
-          {books.map((book) => (
-            <div>
+          {books.map((book,idx) => (
+            <div key={idx}>
               <h1>{book.bookName}</h1>
               <small>{book.author}</small>
             </div>
