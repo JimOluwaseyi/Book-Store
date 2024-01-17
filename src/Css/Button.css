@@ -1,0 +1,12 @@
+.editRemove {
+  margin: 20px 0 5px 0;
+  color: steelblue;
+  font-size: 17px;
+}
+
+.removeBtn button {
+  border: none;
+  color: steelblue;
+  background: none;
+  font-size: 17px;
+}

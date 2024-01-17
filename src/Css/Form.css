@@ -1,0 +1,30 @@
+hr {
+  margin: 20px 400px;
+  background-color: grey;
+}
+
+form {
+  margin: 10px 400px;
+}
+
+.inputDiv {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  width: 380px;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid grey;
+  outline: none;
+}
+
+.inputDiv button {
+  width: 200px;
+  background: blue;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
