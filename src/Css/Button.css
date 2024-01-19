@@ -5,8 +5,11 @@
 }
 
 .removeBtn button {
-  border: none;
-  color: steelblue;
   background: none;
   font-size: 17px;
+}
+
+.editRemove li > button {
+  border: none;
+  background: none;
 }

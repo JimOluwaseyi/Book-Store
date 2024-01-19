@@ -1,27 +1,16 @@
-import { useState } from "react";
 import DeleteButton from "./DeleteButton";
-import Form from "./Form";
 import "../Css/Books.css";
-const Books = () => {
-  const [books] = useState([
-    {
-      bookName: "The Hunger Games",
-      author: "Jim Oluwaseyi",
-    },
-  ]);
-  
+import PropTypes from "prop-types";
+
+const Books = ({ book }) => {
   return (
     <>
       <section className="bookBg">
         <div className="bookContainer">
-          <p>Action</p>
-          {books.map((book,idx) => (
-            <div key={idx}>
-              <h1>{book.bookName}</h1>
-              <small>{book.author}</small>
-            </div>
-          ))}
-          <DeleteButton />
+          <p>{book.category}</p>
+          <h1>{book.title}</h1>
+          <small>{book.author}</small>
+          <DeleteButton id={book.item_id} />
         </div>
         <div className="progressChapter">
           <div className="bookMonitor">
@@ -40,9 +29,16 @@ const Books = () => {
           </div>
         </div>
       </section>
-      <Form />
     </>
   );
+};
+Books.propTypes = {
+  book: PropTypes.shape({
+    category: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    item_id: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Books;

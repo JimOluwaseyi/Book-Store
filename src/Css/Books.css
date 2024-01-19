@@ -8,6 +8,10 @@
   box-shadow: 2px 2px 2px 2px white;
 }
 
+.bookContainer {
+  margin: 10px 0;
+}
+
 .bookContainer p {
   margin: 10px 0;
   color: grey;
