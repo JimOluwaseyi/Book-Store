@@ -16,7 +16,7 @@ const Books = ({ book }) => {
           <div className="bookMonitor">
             <button id="radius"></button>
             <div>
-              <h2>64%</h2>
+              <h2>100%</h2>
               <small>Completed</small>
             </div>
           </div>
