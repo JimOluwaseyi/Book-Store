@@ -17,9 +17,7 @@ export const addBookToServer = createAsyncThunk(
   async (book, thunkAPI) => {
     try {
       const response = await axios.post(`${apiBase}/apps/${appId}/books`, book);
-      console.log(response, "response");
       const data = response.data;
-      console.log(data);
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue("Endpoint is invalid");
@@ -34,7 +32,6 @@ export const getBookFromServer = createAsyncThunk(
     try {
       const response = await axios.get(`${apiBase}/apps/${appId}/books`);
 
-      console.log(response, "response get");
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue("Endpoint is invalid");
@@ -62,7 +59,6 @@ const bookSlice = createSlice({
     builder
       .addCase(addBookToServer.fulfilled, (state, action) => {
         state.status = "successful";
-        console.log(action, "Action");
         state.books = state.books.concat(action.meta.arg);
       })
       .addCase(addBookToServer.rejected, (state) => {
@@ -77,7 +73,6 @@ const bookSlice = createSlice({
           const books = action.payload[key][0];
           return { ...books, item_id: key };
         });
-        console.log(arrBooks, "Book from payload");
 
         state.books = arrBooks;
       })
@@ -92,7 +87,6 @@ const bookSlice = createSlice({
         const removeBook = (state.books = state.books.filter(
           (book) => book.item_id !== action.payload
         ));
-        console.log(removeBook, "Remove the books");
       });
   },
 });

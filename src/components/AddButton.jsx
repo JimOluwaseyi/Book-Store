@@ -9,7 +9,6 @@ const AddButton = ({ title, author}) => {
   const handleAddBook = () => {
     if (title && author){
       dispatch(addBookToServer({ title, author, item_id , category: "Fiction"}));
-      console.log(title, author);
 
     }
   };

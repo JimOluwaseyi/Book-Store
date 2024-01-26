@@ -22,7 +22,6 @@ const Form = () => {
 
 
   };
-  console.log(title, author);
 
   return (
     <>

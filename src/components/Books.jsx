@@ -3,7 +3,6 @@ import "../Css/Books.css";
 import PropTypes from "prop-types";
 
 const Books = ({ book }) => {
-  console.log(book);
   return (
     <>
       <section className="bookBg">

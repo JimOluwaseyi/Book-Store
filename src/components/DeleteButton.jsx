@@ -6,9 +6,8 @@ const DeleteButton =({id})=>{
   const dispatch = useDispatch()
 
   const handleDelete =()=>{
-    
+
     dispatch(deleteBook(id))
-    console.log(id, "ID");
   }
   
     return ( <ul className="editRemove">
