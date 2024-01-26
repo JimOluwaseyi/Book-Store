@@ -1,0 +1,68 @@
+.bookBg {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 400px;
+  padding: 10px 20px;
+  align-items: center;
+  box-shadow: 2px 2px 2px 2px white;
+}
+
+.bookContainer {
+  margin: 10px 0;
+}
+
+.bookContainer p {
+  margin: 10px 0;
+  color: grey;
+}
+
+.bookContainer small {
+  color: steelblue;
+}
+
+.bookMonitor {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.border {
+  width: 2px;
+  height: 70px;
+  background-color: rgba(128, 128, 128, 0.256);
+}
+
+#radius {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background: none;
+  border-color: blue;
+}
+
+.progressChapter {
+  display: flex;
+  gap: 85px;
+  align-items: center;
+}
+
+.chapters h3 {
+  color: grey;
+  font-size: 17px;
+  margin: 5px 0;
+}
+
+.chapters p {
+  font-size: 21px;
+}
+
+.chapters button {
+  background-color: blue;
+  color: #ffffffc2;
+  border: none;
+  height: 30px;
+  width: 210px;
+  margin: 20px 0;
+  border-radius: 4px;
+}
