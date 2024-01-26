@@ -1,14 +1,14 @@
 import "../Css/Button.css"
 import { useDispatch } from "react-redux";
-import { removeBook } from "../redux/book/bookSlice";
+import { deleteBook } from "../redux/book/bookSlice";
 import PropTypes from 'prop-types';
 const DeleteButton =({id})=>{
   const dispatch = useDispatch()
 
   const handleDelete =()=>{
-    dispatch(removeBook(id));
-    console.log(dispatch, "Delete btn click");
-    console.log(id);
+    
+    dispatch(deleteBook(id))
+    console.log(id, "ID");
   }
   
     return ( <ul className="editRemove">

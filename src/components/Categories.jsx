@@ -1,7 +1,9 @@
+import { useSelector} from "react-redux";
 const Categories =()=>{
+    const { status}= useSelector((state)=>state.categories)
     return (
         <>
-        <h1>CATEGORY IS UNDER CONSTRUCTION </h1>
+        <h1>{status}</h1>
         
         </>
     )

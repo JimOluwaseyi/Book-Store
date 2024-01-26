@@ -3,6 +3,7 @@ import "../Css/Books.css";
 import PropTypes from "prop-types";
 
 const Books = ({ book }) => {
+  console.log(book);
   return (
     <>
       <section className="bookBg">
@@ -10,7 +11,7 @@ const Books = ({ book }) => {
           <p>{book.category}</p>
           <h1>{book.title}</h1>
           <small>{book.author}</small>
-          <DeleteButton id={book.item_id} />
+          <DeleteButton id = { book.item_id} />
         </div>
         <div className="progressChapter">
           <div className="bookMonitor">

@@ -8,11 +8,7 @@ const initialState = {
 const categoriesSlice = createSlice({
   name: "categories",
   initialState,
-  reducers: {
-    addStatus: (state, action) => {
-      state.status = action.payload;
-    },
-  },
+  reducers: {},
 });
 
 export default categoriesSlice.reducer;
