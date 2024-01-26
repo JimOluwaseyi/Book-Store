@@ -44,9 +44,7 @@ export const getBookFromServer = createAsyncThunk(
 export const deleteBook = createAsyncThunk(
   "books/deleteBook",
   async (itemId) => {
-    await axios.delete(
-      `${apiBase}/apps/${appId}/books/${itemId}`
-    );
+    await axios.delete(`${apiBase}/apps/${appId}/books/${itemId}`);
     return itemId;
   }
 );
@@ -84,9 +82,9 @@ const bookSlice = createSlice({
       })
       .addCase(deleteBook.fulfilled, (state, action) => {
         state.status = "successful";
-        const removeBook = (state.books = state.books.filter(
+        state.books = state.books.filter(
           (book) => book.item_id !== action.payload
-        ));
+        );
       });
   },
 });
